@@ -1,0 +1,154 @@
+.input-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 39, 68, 0.4);
+  display: flex;
+  align-items: flex-end;
+  z-index: 50;
+}
+
+.input-panel {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px 16px 0 0;
+  padding: 14px 14px calc(14px + env(safe-area-inset-bottom));
+  max-height: 88vh;
+  overflow-y: auto;
+  animation: input-panel-up 0.18s ease-out;
+}
+
+@keyframes input-panel-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0.4;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.input-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f2744;
+  margin-bottom: 10px;
+}
+
+.input-panel-header button {
+  border: none;
+  background: none;
+  color: #2f88c9;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.input-panel-empty {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.input-panel-payments {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.input-panel-payment-badge {
+  border: 1.5px solid;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 11.5px;
+  color: #3b4a5c;
+}
+
+.input-panel-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.input-panel-platform-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1.5px solid;
+  border-radius: 99px;
+  padding: 6px 11px;
+  background: #fff;
+  font-size: 12.5px;
+  color: #3b4a5c;
+  cursor: pointer;
+}
+
+.input-panel-platform-chip.is-selected {
+  background: #f2f8fd;
+  font-weight: 700;
+}
+
+.input-panel-platform-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.input-panel-platform-done {
+  font-size: 10.5px;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.input-panel-amount {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f2744;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 10px;
+}
+
+.input-panel-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.input-panel-key {
+  border: 1px solid #eef3f8;
+  background: #fbfdff;
+  border-radius: 8px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f2744;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.input-panel-key:active {
+  background: #e0e7ff;
+}
+
+.input-panel-save-btn {
+  width: 100%;
+  border: none;
+  background: #0f2744;
+  color: #fff;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 14.5px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.input-panel-save-btn:disabled {
+  background: #cfdae6;
+  cursor: not-allowed;
+}
