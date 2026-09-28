@@ -1,0 +1,58 @@
+.drum-roll-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.drum-roll-label {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.drum-roll {
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.drum-roll::-webkit-scrollbar {
+  display: none;
+}
+
+.drum-roll-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #cfdae6;
+  border-bottom: 1px solid #cfdae6;
+  background: #f2f8fd;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.drum-roll-item {
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.15s, font-size 0.15s;
+}
+
+.drum-roll-item.is-selected {
+  color: #0f2744;
+  font-weight: 700;
+  font-size: 18px;
+}
