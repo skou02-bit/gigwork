@@ -6,7 +6,15 @@
 
 ## 現状
 
-要件定義フェーズが完了した段階。実装はこれから。
+`app/` 配下に、コア機能（カレンダー入力・ヘッダー集計・固定費逆算アラート・支出・リザルト・設定・スクショ自動入力）を実装した最小構成のPWAを用意。ビルド不要のVanilla JS + localStorageのみで動作し、サーバー・バックエンド・外部API呼び出しは一切ない。
+
+### 動かし方
+
+ローカルでは `app/index.html` を任意の静的サーバーで配信するだけ（例: `npx serve app`）。file://では manifest/service worker が動かないため、必ずHTTP経由で開くこと。
+
+### 公開（GitHub Pages、無料）
+
+`.github/workflows/deploy-pages.yml` を用意済み。mainブランチにマージ後、リポジトリの Settings → Pages → Source を「GitHub Actions」に切り替えれば、以後 `app/` への変更がpushされるたびに自動で `https://<ユーザー名>.github.io/gigwork/` に公開される（サーバー費用・API利用料ともに発生しない）。
 
 ## 要件定義
 

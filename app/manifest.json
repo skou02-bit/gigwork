@@ -1,0 +1,13 @@
+{
+  "name": "gigwork",
+  "short_name": "gigwork",
+  "description": "ギグワーカー向け収益管理カレンダー",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F7F5F1",
+  "theme_color": "#2F6F5E",
+  "icons": [
+    { "src": "./icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
