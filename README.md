@@ -14,7 +14,7 @@
 
 ### 公開（GitHub Pages、無料）
 
-`.github/workflows/deploy-pages.yml` を用意済み。mainブランチにマージ後、リポジトリの Settings → Pages → Source を「GitHub Actions」に切り替えれば、以後 `app/` への変更がpushされるたびに自動で `https://<ユーザー名>.github.io/gigwork/` に公開される（サーバー費用・API利用料ともに発生しない）。
+`.github/workflows/deploy-pages.yml` を用意済み（このリポジトリのデフォルトブランチへのpushをトリガーにしている）。リポジトリの Settings → Pages → Source を「GitHub Actions」に切り替えれば、以後 `app/` への変更がpushされるたびに自動で `https://<ユーザー名>.github.io/gigwork/` に公開される（サーバー費用・API利用料ともに発生しない）。
 
 ## 要件定義
 

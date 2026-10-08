@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: ["claude/gig-worker-calendar-requirements-4w32b5"]
     paths: ["app/**"]
   workflow_dispatch: {}
 
